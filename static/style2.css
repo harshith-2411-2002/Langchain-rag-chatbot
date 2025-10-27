@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('../static/RAGbotbgi.png'); /* Replace 'background_image.jpg' with your image file */
+    background-size: cover;
+    background-position: center;
+}
+
+.background-image::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 80%); /* Radial gradient for water drop effect */
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ensure the container fills the viewport */
+    background-color: transparent; /* Transparent background */
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 60%;
+    max-height: 30vh;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.chat-box {
+    height: 300px;
+    width: 80%; /* Adjust as needed */
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+   /* White background color */
+    overflow-y: auto; /* Enable scrolling */
+     /* Add border for clarity */
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user {
+    background-color: #eff1f3; /* Light gray for user messages */
+    align-self: flex-end; /* Align user messages to the right */
+}
+
+.bot {
+    background-color: #33e3f7; /* Lighter gray for bot messages */
+    align-self: flex-start; /* Align bot messages to the left */
+}
+
+.user-input {
+    display: flex;
+    align-items: center;
+    width: 80%; /* Adjust as needed */
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px; /* Adjust font size */
+}
+
+.send_button {
+    padding: 5px; /* Reduced padding */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px; /* Reduced margin */
+    background-color: #f3f5f7; /* Blue background color */
+    width: 30px; /* Adjust width */
+    height: 30px; /* Adjust height */
+    font-size: 12px; /* Adjust font size */
+}
+
+.send_button:hover {
+    background-color: #110a01; /* Darker blue on hover */
+}

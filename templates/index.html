@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Chat Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="container">
+        <div class="header">
+            <h1>The Role of innovation in modern day society Conversational Helpline Bot</h1>
+        </div>
+        <div class="chat-box" id="chat-box"></div>
+        <div class="user-input">
+            <input type="text" id="user-input" placeholder="Type your query here...">
+            <img src="../static/send_button.jpg" onclick="sendMessage()" class="send_button" style="cursor: pointer;">
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
